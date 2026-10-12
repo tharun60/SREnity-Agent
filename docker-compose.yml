@@ -1,0 +1,12 @@
+services:
+  agent:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      SRE_INCIDENT_DB: /app/data/incidents.jsonl
+    volumes:
+      - ./data:/app/data
+      - ./examples:/app/examples:ro
+

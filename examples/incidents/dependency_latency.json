@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"Checkout latency SLO violation; upstream dependency timeout","labels":{"namespace":"shop"}}],
+  "get_kubernetes_events": [],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"checkout pods healthy and Ready","labels":{"namespace":"shop"}}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"payment dependency p99 latency increased to 4.2s","value":4.2}],
+  "query_logs": [{"source":"loki","kind":"log","message":"upstream payment timeout after 3000ms; retry exhausted"}]
+}

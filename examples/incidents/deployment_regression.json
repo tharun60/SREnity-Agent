@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"5xx error budget burn began after deployment","labels":{"namespace":"prod"}}],
+  "get_kubernetes_events": [{"source":"kubernetes","kind":"event","message":"deployment api revision 42 completed 4 minutes ago","labels":{"namespace":"prod"}}],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"new replica revision 42 Ready but failing requests","labels":{"namespace":"prod"}}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"5xx isolated to deployment revision 42 new replica","value":0.27}],
+  "query_logs": [{"source":"loki","kind":"log","message":"HTTP 500 feature flag parser failed"}]
+}

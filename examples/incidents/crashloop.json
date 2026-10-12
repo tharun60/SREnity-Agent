@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"Critical: api pod is in CrashLoopBackOff","labels":{"namespace":"default","deployment":"api"}}],
+  "get_kubernetes_events": [{"source":"kubernetes","kind":"event","message":"Back-off restarting failed container api","labels":{"namespace":"default","pod":"api-7d9f"}}],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"api-7d9f waiting=CrashLoopBackOff restarts=14 last_exit_code=1","labels":{"namespace":"default","pod":"api-7d9f"},"value":14}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"5xx rate is 18% for deployment api","labels":{"namespace":"default","deployment":"api"},"value":0.18}],
+  "query_logs": [{"source":"loki","kind":"log","message":"FATAL missing required environment variable DATABASE_URL; exit code 1","labels":{"namespace":"default","pod":"api-7d9f"}}]
+}

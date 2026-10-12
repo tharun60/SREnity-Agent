@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"kubernetes","kind":"alert","message":"Critical: api container OOMKilled","labels":{"namespace":"payments"}}],
+  "get_kubernetes_events": [{"source":"kubernetes","kind":"event","message":"Container exceeded memory limit and was OOMKilled","labels":{"namespace":"payments","pod":"api-6bb8"}}],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"last_state=terminated reason=OOMKilled memory limit=512Mi","labels":{"namespace":"payments","pod":"api-6bb8"},"value":6}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"working set memory is 99% of memory limit","labels":{"namespace":"payments"},"value":0.99}],
+  "query_logs": [{"source":"loki","kind":"log","message":"cache size grew without bound after config reload","labels":{"namespace":"payments"}}]
+}

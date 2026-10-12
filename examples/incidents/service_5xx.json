@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"Service 5xx rate increased to 23%","labels":{"namespace":"prod"}}],
+  "get_kubernetes_events": [{"source":"kubernetes","kind":"event","message":"New replica set created by deployment api","labels":{"namespace":"prod"}}],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"new replica api-89d is Ready","labels":{"namespace":"prod"}}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"new replica serves all HTTP 500 responses after deployment","labels":{"namespace":"prod"},"value":0.23}],
+  "query_logs": [{"source":"loki","kind":"log","message":"HTTP 500 schema mismatch reading customer record","labels":{"namespace":"prod"}}]
+}

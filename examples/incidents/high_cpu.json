@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"High CPU > 95% on checkout","labels":{"namespace":"shop"}}],
+  "get_kubernetes_events": [],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"checkout pods Ready; CPU throttling observed","labels":{"namespace":"shop"}}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"CPU throttling ratio 42%; high CPU sustained","labels":{"namespace":"shop"},"value":0.42}],
+  "query_logs": [{"source":"loki","kind":"log","message":"request queue depth increasing","labels":{"namespace":"shop"}}]
+}

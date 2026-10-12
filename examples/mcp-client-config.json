@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sre-evidence": {
+      "command": "/absolute/path/to/sre-agent/.venv/bin/sre-mcp",
+      "args": []
+    }
+  }
+}

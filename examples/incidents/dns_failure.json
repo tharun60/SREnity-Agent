@@ -1,0 +1,7 @@
+{
+  "detection": [{"source":"prometheus","kind":"alert","message":"Dependency errors: temporary failure in name resolution","labels":{"namespace":"prod"}}],
+  "get_kubernetes_events": [{"source":"kubernetes","kind":"event","message":"CoreDNS pods report readiness failures","labels":{"namespace":"kube-system"}}],
+  "get_pod_statuses": [{"source":"kubernetes","kind":"pod_status","message":"coredns pod CPU saturated","labels":{"namespace":"kube-system"}}],
+  "query_prometheus": [{"source":"prometheus","kind":"metric","message":"DNS request latency and NXDOMAIN rate elevated","value":0.31}],
+  "query_logs": [{"source":"loki","kind":"log","message":"DNS upstream timeout resolving inventory.prod.svc.cluster.local"}]
+}
